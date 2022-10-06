@@ -1,10 +1,10 @@
 class Otobus:
     """Otobus bilet satis takip sinifi"""
-    plaka:str = ""  # Otobus plakasi
-    nereden:str = "" # Baslangic sehri
-    nereye:str = "" # Gidilecek sehir
-    koltuk_sayisi:int = 0 # Toplam koltuk sayisi
-    dolu_koltuk_sayisi:int = 0 # Dolu koltuk sayisi
+    plaka:str = ""  # otobus plakasi
+    nereden:str = "" # baslangic sehri
+    nereye:str = ""  # gidilecek sehir
+    koltuk_sayisi:int = 0 # toplam koltuk sayisi
+    dolu_koltuk_sayisi:int = 0 # dolu koltuk sayisi
 
     def __init__(self, plaka, nereden, nereye, koltuk_sayisi):
         """ CONSTRUCTOR
@@ -20,12 +20,14 @@ class Otobus:
 
     def bilet_sat(self):
         """Otobusteki dolu koltuk sayisini 1 artirir"""
-        self.dolu_koltuk_sayisi = self.dolu_koltuk_sayisi + 1
+        if self.dolu_koltuk_sayisi < self.koltuk_sayisi:
+            self.dolu_koltuk_sayisi = self.dolu_koltuk_sayisi + 1
         
     
     def bilet_iade(self):
         """Otobusteki dolu koltuk sayisini 1 azaltir"""
-        self.dolu_koltuk_sayisi = self.dolu_koltuk_sayisi - 1
+        if self.dolu_koltuk_sayisi > 0:
+            self.dolu_koltuk_sayisi = self.dolu_koltuk_sayisi - 1
 
     
     def durum_yaz(self):
