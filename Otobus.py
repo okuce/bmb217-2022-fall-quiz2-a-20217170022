@@ -30,7 +30,7 @@ class Otobus:
     
     def durum_yaz(self):
         """Otobusun guzergahini, plakasini,bos ve dolu koltuk sayisini yazdirir"""
-        print(f"{self.nereden} {self.nereye} {self.plaka} {self.koltuk_sayisi - self.dolu_koltuk_sayisi} {self.dolu_koltuk_sayisi}")
+        print(f"{self.nereden},{self.nereye},{self.plaka},{self.koltuk_sayisi - self.dolu_koltuk_sayisi},{self.dolu_koltuk_sayisi}")
         
 
 
