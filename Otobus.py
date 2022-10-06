@@ -1,3 +1,12 @@
+"""
+Isim: Mehmet
+Soyisim: Solak
+Numara: 20217170022
+Bolum: Bilgisayar Muhendisligi / 2.Sinif
+"""
+
+
+
 class Otobus:
     """Otobus bilet satis takip sinifi"""
     plaka:str = ""  # otobus plakasi
